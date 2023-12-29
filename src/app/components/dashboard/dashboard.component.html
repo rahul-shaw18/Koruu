@@ -1,0 +1,59 @@
+<button (click)="handleMultipleDelete()">Delete</button>
+<table>
+  <thead>
+    <tr>
+      <th>
+        <input type="checkbox" name="" id="" (change)="handleSelectAll()" />
+      </th>
+      <th (click)="handleSort('user_name')">User Name</th>
+      <th (click)="handleSort('phone_number')">Phone Number</th>
+      <th (click)="handleSort('email')">Email ID</th>
+      <th>options</th>
+    </tr>
+  </thead>
+
+  <tbody
+    cdkDropList
+    class="dragable-table"
+    (cdkDropListDropped)="drop($event)"
+    cdkDropListData="userDetails"
+  >
+    <tr
+      *ngFor="let user of userDetails"
+      cdkDragBoundary=".dragable-table"
+      cdkDrag
+    >
+      <td>
+        <input
+          type="checkbox"
+          name=""
+          [id]="user.id"
+          [checked]="user.isSelected"
+          (change)="handleUserSelect($event, user.id)"
+        />
+      </td>
+      <td>
+        <div *ngIf="!user.enableEditing" (click)="handleEditing(user.id)">
+          {{ user.user_name }}
+        </div>
+        <input
+        #inputElement
+          *ngIf="user.enableEditing"
+          type="text"
+          
+          [value]="user.user_name"
+          [(ngModel)]="user.user_name"
+          (blur)="user.enableEditing = false"
+        />
+      </td>
+      <td>{{ user.phone_number }}</td>
+      <td>{{ user.email }}</td>
+      <td>
+        <span class="options"
+          ><button (click)="handleDelete(user.id)">Delete</button>
+          <button cdkDragHandle>drag</button>
+        </span>
+      </td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,15 @@
+::ng-deep .mat-mdc-snack-bar-container .mdc-snackbar__surface {
+    border-radius: 5px !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+}
+
+::ng-deep .mdc-snackbar__label {
+    padding: 0 20px 20px 0 !important;
+}
+
+::ng-deep .mat-mdc-snack-bar-container .mdc-snackbar__surface {
+    min-width: 0 !important;
+    max-width: none !important;
+}

@@ -1,0 +1,124 @@
+{
+  "user": [
+    {
+      "id": 1,
+      "user_name": "Walt Layland",
+      "phone_number": "+507 (423) 929-7605",
+      "email": "wlayland0@hostgator.com"
+    },
+    {
+      "id": 2,
+      "user_name": "Glenn Delves",
+      "phone_number": "+7 (986) 124-0279",
+      "email": "gdelves1@cargocollective.com"
+    },
+    {
+      "id": 3,
+      "user_name": "Brittne Keefe",
+      "phone_number": "+82 (112) 552-3882",
+      "email": "bkeefe2@paginegialle.it"
+    },
+    {
+      "id": 4,
+      "user_name": "Kara Berick",
+      "phone_number": "+62 (805) 615-3088",
+      "email": "kberick3@dyndns.org"
+    },
+    {
+      "id": 5,
+      "user_name": "Vincent Braunter",
+      "phone_number": "+7 (798) 238-0506",
+      "email": "vbraunter4@netvibes.com"
+    },
+    {
+      "id": 6,
+      "user_name": "Clarice Bartleet",
+      "phone_number": "+381 (485) 385-2532",
+      "email": "cbartleet5@sciencedaily.com"
+    },
+    {
+      "id": 7,
+      "user_name": "Phip Colisbe",
+      "phone_number": "+57 (489) 503-4445",
+      "email": "pcolisbe6@paypal.com"
+    },
+    {
+      "id": 8,
+      "user_name": "Wadsworth Morales",
+      "phone_number": "+992 (477) 837-0602",
+      "email": "wmorales7@nhs.uk"
+    },
+    {
+      "id": 9,
+      "user_name": "Edithe Currall",
+      "phone_number": "+55 (939) 298-2627",
+      "email": "ecurrall8@msu.edu"
+    },
+    {
+      "id": 10,
+      "user_name": "Demott Grenkov",
+      "phone_number": "+235 (173) 134-5191",
+      "email": "dgrenkov9@multiply.com"
+    },
+    {
+      "id": 11,
+      "user_name": "Dennie Thies",
+      "phone_number": "+33 (305) 477-2043",
+      "email": "dthiesa@reverbnation.com"
+    },
+    {
+      "id": 12,
+      "user_name": "Solly Chugg",
+      "phone_number": "+1 (719) 645-6503",
+      "email": "schuggb@dropbox.com"
+    },
+    {
+      "id": 13,
+      "user_name": "Franciska Wilfinger",
+      "phone_number": "+7 (456) 861-6431",
+      "email": "fwilfingerc@printfriendly.com"
+    },
+    {
+      "id": 14,
+      "user_name": "Henri Galvin",
+      "phone_number": "+86 (101) 886-3457",
+      "email": "hgalvind@4shared.com"
+    },
+    {
+      "id": 15,
+      "user_name": "Devin Maslen",
+      "phone_number": "+51 (590) 344-3647",
+      "email": "dmaslene@cnbc.com"
+    },
+    {
+      "id": 16,
+      "user_name": "Carlie Roocroft",
+      "phone_number": "+1 (682) 230-6015",
+      "email": "croocroftf@army.mil"
+    },
+    {
+      "id": 17,
+      "user_name": "Maurizia Hillum",
+      "phone_number": "+86 (769) 253-3486",
+      "email": "mhillumg@uiuc.edu"
+    },
+    {
+      "id": 18,
+      "user_name": "Audry Gadesby",
+      "phone_number": "+372 (822) 395-5870",
+      "email": "agadesbyh@ed.gov"
+    },
+    {
+      "id": 19,
+      "user_name": "Jennine Elnaugh",
+      "phone_number": "+1 (186) 315-0414",
+      "email": "jelnaughi@independent.co.uk"
+    },
+    {
+      "id": 20,
+      "user_name": "Marjory Ride",
+      "phone_number": "+33 (798) 798-2852",
+      "email": "mridej@elegantthemes.com"
+    }
+  ]
+}
