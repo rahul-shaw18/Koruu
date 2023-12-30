@@ -13,3 +13,16 @@
     min-width: 0 !important;
     max-width: none !important;
 }
+
+::ng-deep .mat-mdc-snack-bar-handset,
+.mat-mdc-snack-bar-container,
+.mat-mdc-snack-bar-label {
+    flex: none !important;
+}
+
+@media (max-width: 480px),
+(max-width: 344px) {
+    ::ng-deep .mat-mdc-snack-bar-container {
+        width: fit-content !important;
+    }
+}
