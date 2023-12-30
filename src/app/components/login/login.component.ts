@@ -1,9 +1,7 @@
 import { SnackbarService } from './../../services/snackbar.service';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
-import { SnackbarComponent } from 'src/app/snackbar/snackbar.component';
 
 @Component({
   selector: 'app-login',
@@ -12,12 +10,24 @@ import { SnackbarComponent } from 'src/app/snackbar/snackbar.component';
 })
 export class LoginComponent implements OnInit {
   loginForm!: FormGroup;
-  submitted = false;
-  constructor(private fb: FormBuilder, private router:Router,private snackbarService:SnackbarService) {}
+  nameSubmitted = false;
+  passwordSubmitted = false;
+  constructor(
+    private fb: FormBuilder,
+    private router: Router,
+    private snackbarService: SnackbarService
+  ) {}
 
   ngOnInit(): void {
     this.loginForm = this.fb.group({
-      name: ['',[Validators.required,Validators.minLength(3)]],
+      name: [
+        '',
+        [
+          Validators.required,
+          Validators.minLength(3),
+          Validators.pattern('^[a-zA-Z ]*$'),
+        ],
+      ],
       password: [
         '',
         [
@@ -30,8 +40,12 @@ export class LoginComponent implements OnInit {
       ],
     });
 
-    this.loginForm.valueChanges.subscribe(() => {
-      this.submitted = false;
+    this.gf['name']?.valueChanges.subscribe(() => {
+      this.nameSubmitted = false;
+    });
+
+    this.gf['password']?.valueChanges.subscribe(() => {
+      this.passwordSubmitted = false;
     });
   }
   get gf() {
@@ -39,15 +53,22 @@ export class LoginComponent implements OnInit {
   }
 
   login() {
+    this.loginForm.markAllAsTouched();
+
     if (this.loginForm.invalid) {
-      this.submitted = true;
+      this.nameSubmitted = true;
+      this.passwordSubmitted = true;
     } else {
-      this.submitted = false;
-      if (this.gf['name'].value == 'John' && this.gf['password'].value == 'Hello@123') {
-        this.snackbarService.openSnackBar('Login')
-        this.router.navigate(['/dashboard'])
+      this.nameSubmitted = false;
+      this.passwordSubmitted = false;
+      if (
+        this.gf['name'].value == 'John' &&
+        this.gf['password'].value == 'Hello@123'
+      ) {
+        this.snackbarService.openSnackBar('Login');
+        this.router.navigate(['/dashboard']);
       } else {
-        this.snackbarService.openSnackBar('incorrect-password')
+        this.snackbarService.openSnackBar('Incorrect-password');
       }
     }
   }

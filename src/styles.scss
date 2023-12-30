@@ -49,16 +49,16 @@
 }
 
 ::-webkit-scrollbar-button:single-button:vertical:decrement {
-  width: 10px;
+  width: 12px;
   height: 10px;
-  background-position: 2px center;
-  background-image: url("assets/up-arrow.png");
+  background-position: 1px center;
+  background-image: url("assets/up-arrow.svg");
 }
 
 
 ::-webkit-scrollbar-button:single-button:vertical:increment {
-  width: 10px;
+  width: 12px;
   height: 10px;
-  background-position: 2px center;
-  background-image: url("assets/down-arrow.png");
+  background-position: 1px center;
+  background-image: url("assets/down-arrow.svg");
 }

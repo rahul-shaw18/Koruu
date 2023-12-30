@@ -63,6 +63,7 @@
 
         .table-container {
             overflow: auto;
+            height: calc(100vh - 110px);
 
             table {
                 border-collapse: collapse;
