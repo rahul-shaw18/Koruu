@@ -1,4 +1,12 @@
-<div>
-    <p>Are you sure you want to delete</p>
-    <div><button [mat-dialog-close]="true">Yes</button> <button [mat-dialog-close]="false">Cancel</button></div>
-</div>
+<section class="dialog">
+  <span class="icon-container">
+    <img src="assets/delete.svg" alt="" />
+  </span>
+  <div class="content">
+    <div class="label">Are you sure you want to delete</div>
+    <span class="btn-container"
+      ><span class="btn confirm" [mat-dialog-close]="true">Yes</span>
+      <span class="btn" [mat-dialog-close]="false">Cancel</span></span
+    >
+  </div>
+</section>

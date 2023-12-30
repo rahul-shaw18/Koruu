@@ -1,59 +1,92 @@
-<button (click)="handleMultipleDelete()">Delete</button>
-<table>
-  <thead>
-    <tr>
-      <th>
-        <input type="checkbox" name="" id="" (change)="handleSelectAll()" />
-      </th>
-      <th (click)="handleSort('user_name')">User Name</th>
-      <th (click)="handleSort('phone_number')">Phone Number</th>
-      <th (click)="handleSort('email')">Email ID</th>
-      <th>options</th>
-    </tr>
-  </thead>
+<header>
+  <img class="brand-logo" src="assets/yourLogo1.png" alt="" srcset="" />
+</header>
 
-  <tbody
-    cdkDropList
-    class="dragable-table"
-    (cdkDropListDropped)="drop($event)"
-    cdkDropListData="userDetails"
-  >
-    <tr
-      *ngFor="let user of userDetails"
-      cdkDragBoundary=".dragable-table"
-      cdkDrag
-    >
-      <td>
-        <input
-          type="checkbox"
-          name=""
-          [id]="user.id"
-          [checked]="user.isSelected"
-          (change)="handleUserSelect($event, user.id)"
-        />
-      </td>
-      <td>
-        <div *ngIf="!user.enableEditing" (click)="handleEditing(user.id)">
-          {{ user.user_name }}
-        </div>
-        <input
-        #inputElement
-          *ngIf="user.enableEditing"
-          type="text"
-          
-          [value]="user.user_name"
-          [(ngModel)]="user.user_name"
-          (blur)="user.enableEditing = false"
-        />
-      </td>
-      <td>{{ user.phone_number }}</td>
-      <td>{{ user.email }}</td>
-      <td>
-        <span class="options"
-          ><button (click)="handleDelete(user.id)">Delete</button>
-          <button cdkDragHandle>drag</button>
-        </span>
-      </td>
-    </tr>
-  </tbody>
-</table>
+<main class="wrapper">
+  <div class="head">
+    <span class="title">Lorem ipsum is a dummy text</span>
+    <div class="multiple-delete" [ngStyle]="this.selectedUser.length?{'opacity':1, 'cursor':'pointer'}:{'opacity':0.5}" (click)="this.selectedUser.length ? handleMultipleDelete(): null">Delete</div>
+  </div>
+  <div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th>
+            <div class="th-container">
+              <input type="checkbox" name=""[checked]="selectedAll" id="" (change)="handleSelectAll($event)" />
+            </div>
+          </th>
+          <th (click)="handleSort('user_name')">
+            <div class="th-container">
+              <span>User Name</span> <img src="assets/dashboard/sort.svg" alt="" srcset="" />
+            </div>
+          </th>
+          <th (click)="handleSort('phone_number')">
+            <div class="th-container">
+              <span>Phone Number</span> <img src="assets/dashboard/sort.svg" alt="" srcset="" />
+            </div>
+          </th>
+          <th (click)="handleSort('email')">
+            <div class="th-container">
+              <span>Email ID</span> <img src="assets/dashboard/sort.svg" alt="" srcset="" />
+            </div>
+          </th>
+          <th><div class="th-container flex-end">
+            <span>Options</span> <img src="assets/dashboard/info.svg" alt="" srcset="" />
+          </div></th>
+        </tr>
+      </thead>
+  
+      <tbody
+        cdkDropList
+        class="dragable-table"
+        (cdkDropListDropped)="drop($event)"
+        cdkDropListData="userDetails"
+      >
+        <tr
+          *ngFor="let user of userDetails"
+          cdkDragBoundary=".dragable-table"
+          cdkDrag
+  
+          [ngClass]="user.isSelected ?'selected-tr':''"
+        >
+          <td>
+            <div class="td-container">
+              <input
+              type="checkbox"
+              name=""
+              [id]="user.id"
+              [checked]="user.isSelected"
+              (change)="handleUserSelect($event, user.id)"
+            />
+            </div>
+  
+          </td>
+          <td>
+           <div class="td-container cursor-pointer" [ngClass]="user.enableEditing ?'editable-container':''">
+            <div class="user-name" *ngIf="!user.enableEditing" (click)="handleEditing(user.id)">
+              {{ user.user_name }}
+            </div>
+            <input
+              #inputElement
+              *ngIf="user.enableEditing"
+              type="text"
+              [value]="user.user_name"
+              [(ngModel)]="user.user_name"
+              (blur)="user.enableEditing = false"
+            />
+           </div>
+          </td>
+          <td><div class="td-container">{{ user.phone_number }}</div></td>
+          <td><div class="td-container">{{ user.email }}</div></td>
+          <td>
+            <span class="options"
+              ><span class="btn" (click)="handleDelete(user.id)"><img src="assets/dashboard/delete.svg" alt=""></span>
+              <span class="btn" cdkDragHandle><img src="assets/dashboard/reorder.svg" alt=""></span>
+            </span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</main>

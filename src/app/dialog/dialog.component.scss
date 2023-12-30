@@ -1,0 +1,55 @@
+.dialog {
+    display: flex;
+    height: 100%;
+
+    .icon-container {
+        background: #FC695C;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 55px;
+    }
+
+    .content {
+        flex: 1;
+        display: flex;
+        justify-content: space-evenly;
+        padding: 0 15px;
+        flex-direction: column;
+
+        .label {
+            color: #000;
+            font-size: 13px;
+            font-weight: 700;
+            line-height: 19px;
+        }
+
+        .btn-container {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 8px;
+            align-self: stretch;
+
+            .btn {
+                display: flex;
+                padding: 4px 10px 5px 10px;
+                justify-content: center;
+                align-items: center;
+                gap: 4px;
+
+                cursor: pointer;
+
+                border-radius: 3px;
+                border: 1px solid #A9A9A9;
+                background: #FFF;
+            }
+
+            .confirm {
+                color: #FFF;
+                background-color: #D94e3b;
+                border: 1px solid #D94e3b;
+            }
+        }
+    }
+}

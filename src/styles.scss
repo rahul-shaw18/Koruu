@@ -3,11 +3,51 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 
 
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family: Open Sans;
 }
-// html, body { height: 100%; }
-// body { margin: 0;  }
+
+/* Scrollbar styles */
+::-webkit-scrollbar {
+    width: 13px;
+    height: 13px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #989898;
+    background-clip: padding-box;
+    border: 2px solid transparent;
+    border-radius: 10px;
+
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: #D6D6D6;
+  }
+  
+  /* Arrow buttons */
+  ::-webkit-scrollbar-button:single-button {
+    background-color: #D6D6D6;
+    display: block;
+    background-size: 10px;
+    background-repeat: no-repeat;
+  }
+  
+  ::-webkit-scrollbar-button:single-button:horizontal:decrement {
+    width: 10px;
+    height: 10px;
+    background-position: 2px center;
+    background-image: url("assets/chevron-left.svg");
+}
+
+/* Right arrow */
+::-webkit-scrollbar-button:single-button:horizontal:increment {
+    width: 12px;
+    height: 10px;
+    background-position: 0px center;
+    background-image: url("assets/chevron-right.svg");
+}
+  

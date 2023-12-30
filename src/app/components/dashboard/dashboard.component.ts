@@ -16,6 +16,8 @@ export class DashboardComponent implements OnInit {
   sortOrder!: string;
   userDetails: any;
   enableEditing = false;
+  selectedUser: any = []
+  selectedAll: boolean = false
 
   constructor(
     private apiService: ApiService,
@@ -41,18 +43,37 @@ export class DashboardComponent implements OnInit {
   }
 
 
-  handleSelectAll() {
+  handleSelectAll(e: any) {
     this.userDetails.forEach((user: any) => {
-      user.isSelected = !user.isSelected;
+      user.isSelected = e.target.checked;
     });
+    this.selectedUser = this.userDetails.filter((user: any) => user.isSelected == true)
+    if (this.selectedUser.length == this.userDetails.length) {
+      this.selectedAll = true
+    } else {
+      this.selectedAll = false
+    }
+
   }
 
   handleUserSelect(e: any, userId: number) {
     this.userDetails.forEach((user: any) => {
       if (user.id == userId) {
         user.isSelected = e.target.checked;
+
+        if (user.isSelected) {
+          this.selectedUser.push(user)
+        } else {
+          this.selectedUser = this.selectedUser.filter((user:any) => user.id !==userId)
+        }
       }
     });
+
+    if (this.selectedUser.length == this.userDetails.length) {
+      this.selectedAll = true
+    } else {
+      this.selectedAll = false
+    }
   }
 
   handleDelete(userID: number) {
@@ -104,6 +125,7 @@ export class DashboardComponent implements OnInit {
     dialogRef.afterClosed().subscribe((result) => {
       if (result) {
         this.userDetails = this.userDetails.filter(filterFunction);
+        this.selectedUser = this.selectedUser.filter(filterFunction)
         this.snackbarService.openSnackBar('Deleted');
       }
     });
