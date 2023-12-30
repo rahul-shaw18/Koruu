@@ -12,7 +12,7 @@ import {
 export class SnackbarComponent {
   constructor(
     private _snackBarRef: MatSnackBarRef<SnackbarComponent>,
-    @Inject(MAT_SNACK_BAR_DATA) public data: any
+    @Inject(MAT_SNACK_BAR_DATA) public data: string
   ) {}
 
   close() {
