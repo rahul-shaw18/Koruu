@@ -15,7 +15,7 @@ main {
             // left: 71px;
             left: 9%;
             
-            width: 510px;
+            width: clamp(220px,45vw,510px);
 
             .ellipse-icon {
                 position: absolute;
@@ -84,6 +84,7 @@ main {
         align-items: center;
         justify-content: center;
         gap: 28px;
+        min-width: 332px;
 
         .wrapper {
             display: flex;
@@ -132,7 +133,7 @@ main {
                     display: flex;
                     flex-direction: column;
                     gap: 16px;
-                    width: 330px;
+                    width: clamp(330px,33vw,330px);
 
 
                     .form-field {

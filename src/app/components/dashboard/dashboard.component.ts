@@ -126,6 +126,7 @@ export class DashboardComponent implements OnInit {
       if (result) {
         this.userDetails = this.userDetails.filter(filterFunction);
         this.selectedUser = this.selectedUser.filter(filterFunction)
+        this.selectedAll = false
         this.snackbarService.openSnackBar('Deleted');
       }
     });
