@@ -62,8 +62,8 @@ export class LoginComponent implements OnInit {
       this.nameSubmitted = false;
       this.passwordSubmitted = false;
       if (
-        this.gf['name'].value == 'John' &&
-        this.gf['password'].value == 'Hello@123'
+        this.gf['name'].value == 'Koru' &&
+        this.gf['password'].value == 'Koru@1234'
       ) {
         this.snackbarService.openSnackBar('Login');
         this.router.navigate(['/dashboard']);
