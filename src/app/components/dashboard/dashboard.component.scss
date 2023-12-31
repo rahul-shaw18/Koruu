@@ -7,21 +7,22 @@
         padding: 8px 0 9px 16px;
 
         .brand-logo {
-            width: 112px;
-            height: 31px;
-
-
+            @media screen and (max-width: 767px) {
+                height: 37px;
+                width: 135px;
+            }
         }
 
-        @media screen and (max-width:767px) {
-            height: 120px;
+        @media screen and (max-width: 767px) {
+            height: 100px;
             justify-content: center;
+            padding: 0;
         }
     }
 
     .wrapper {
         padding: 0 16px;
-        background: #FAFAFA;
+        background: #fafafa;
 
         .head {
             display: flex;
@@ -49,15 +50,13 @@
 
                 border-radius: 4px;
 
-                background: #D94E3B;
+                background: #d94e3b;
 
-
-                color: #FFF;
+                color: #fff;
 
                 font-size: 14px;
                 font-weight: 600;
                 line-height: 20px;
-
             }
         }
 
@@ -76,7 +75,7 @@
 
                     tr,
                     th {
-                        border: 1px solid #D1D1D1;
+                        border: 1px solid #d1d1d1;
                         cursor: pointer;
 
                         .th-container {
@@ -91,19 +90,24 @@
                             font-size: 11px;
                             font-weight: 600;
                             line-height: 14px;
+
+                            @media screen and (max-width: 426px) {
+                                width: 100vw;
+                            }
                         }
 
                         .flex-end {
                             justify-content: flex-end;
-                        }
 
+                            @media screen and (max-width: 426px) {
+                                width: fit-content;
+                            }
+                        }
                     }
 
                     th:first-child {
                         max-width: 30px !important;
                     }
-
-
                 }
 
                 tbody {
@@ -115,13 +119,13 @@
 
                     tr,
                     td {
-                        border: 1px solid #D1D1D1;
+                        border: 1px solid #d1d1d1;
 
                         input[type="text"] {
                             width: 100%;
                             height: 24px;
                             outline: none;
-                            border: 1px solid #CCC;
+                            border: 1px solid #ccc;
                             padding: 5px 8px;
 
                             color: #000;
@@ -139,8 +143,6 @@
                             align-items: center;
                             gap: 3px;
 
-
-
                             overflow: hidden;
                             color: #000;
                             text-overflow: ellipsis;
@@ -152,6 +154,10 @@
                             .user-name {
                                 width: 100%;
                             }
+
+                            @media screen and (max-width: 426px) {
+                                width: 100vw;
+                            }
                         }
 
                         .editable-container {
@@ -161,8 +167,6 @@
                         .cursor-pointer {
                             cursor: pointer;
                         }
-
-
                     }
 
                     td:first-child {
@@ -180,7 +184,6 @@
                             align-items: center;
                             gap: 3px;
 
-
                             .btn {
                                 display: flex;
                                 padding: 4px;
@@ -188,32 +191,34 @@
                                 align-items: center;
 
                                 border-radius: 3px;
-                                border: 1px solid #BABABA;
-                                background: #F9F9F9;
+                                border: 1px solid #bababa;
+                                background: #f9f9f9;
                             }
+                        }
 
-
+                        @media screen and (max-width: 426px) {
+                            width: fit-content;
                         }
                     }
 
                     tr:hover {
-                        background: #FFF2F2;
+                        background: #fff2f2;
                     }
 
                     tr:hover>td:last-child>.options {
-
                         visibility: visible;
                     }
 
                     .selected-tr {
-                        background: #FFDADA;
-                        ;
+                        background: #ffdada;
                     }
-
                 }
             }
-        }
 
+            @media screen and (max-width: 767px) {
+                height: calc(100vh - 160px);
+            }
+        }
     }
 }
 
@@ -222,19 +227,17 @@
         width: 100vw;
     }
 
-    background: #FFF2F2;
+    background: #fff2f2;
 
     td {
         width: calc((100vw - 60px) / 4) !important;
-        border: 1px solid #D1D1D1;
+        border: 1px solid #d1d1d1;
 
         .td-container {
             display: flex;
             padding: 7px 8px;
             align-items: center;
             gap: 3px;
-
-
 
             overflow: hidden;
             color: #000;
@@ -247,13 +250,16 @@
             .user-name {
                 width: 100%;
             }
+
+            @media screen and (max-width: 426px) {
+                width: 100vw;
+            }
         }
 
         .editable-container {
             padding: 0;
         }
     }
-
 
     td:first-child {
         max-width: 30px !important;
@@ -269,7 +275,6 @@
             align-items: center;
             gap: 3px;
 
-
             .btn {
                 display: flex;
                 padding: 4px;
@@ -277,14 +282,15 @@
                 align-items: center;
 
                 border-radius: 3px;
-                border: 1px solid #BABABA;
-                background: #F9F9F9;
+                border: 1px solid #bababa;
+                background: #f9f9f9;
             }
+        }
 
-
+        @media screen and (max-width: 426px) {
+            width: fit-content;
         }
     }
-
 }
 
 .drop-placeholder {}
@@ -292,7 +298,6 @@
 .cdk-drop-list-dragging .cdk-drag {
     transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
 }
-
 
 .backdrop {
     opacity: 0;

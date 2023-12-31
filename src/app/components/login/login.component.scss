@@ -4,18 +4,16 @@ main {
 
     .left-container {
         position: relative;
-        background-color: #FFF1F1;
+        background-color: #fff1f1;
 
         width: 58%;
 
         .content {
             position: relative;
-            // top: 189px;
             top: 24.6%;
-            // left: 71px;
             left: 9%;
-            
-            width: clamp(220px,45vw,510px);
+
+            width: clamp(220px, 45vw, 510px);
 
             .ellipse-icon {
                 position: absolute;
@@ -39,23 +37,23 @@ main {
                     font-weight: 700;
                 }
 
-                @media screen and (max-width:768px) {
+                @media screen and (max-width: 767px) {
                     font-size: 24px;
                 }
             }
 
             .sub-heading {
                 margin-top: 24px;
-                color: #4E4E4E;
+                color: #4e4e4e;
                 font-size: 16px;
 
-                @media screen and (max-width:768px) {
+                @media screen and (max-width: 767px) {
                     font-size: 12px;
                     margin-top: 16px;
                 }
             }
 
-            @media screen and (max-width:768px) {
+            @media screen and (max-width: 767px) {
                 width: 268px;
             }
         }
@@ -65,14 +63,14 @@ main {
             right: 8%;
             bottom: 0;
 
-            @media screen and (max-width:768px) {
+            @media screen and (max-width: 767px) {
                 width: 79px;
                 height: 79px;
                 right: 2%;
             }
         }
 
-        @media screen and (max-width:768px) {
+        @media screen and (max-width: 767px) {
             width: 100%;
             height: 100%;
         }
@@ -92,29 +90,24 @@ main {
             justify-content: center;
             align-items: center;
 
-
-
             .brand-logo {
-                width: 167px;
-                height: 46px;
-                @media screen and (max-width:768px) {
-                    // margin-top: 20%;
+                @media screen and (max-width: 767px) {
+                    width: 135px;
+                    height: 37px;
                 }
             }
 
             .container {
-
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 margin-top: 70px;
                 margin-bottom: 32px;
 
-
                 .lock-icon-container {
                     width: fit-content;
                     border-radius: 48px;
-                    background: #FFF2F2;
+                    background: #fff2f2;
 
                     display: flex;
                     width: 48px;
@@ -123,9 +116,8 @@ main {
                     align-items: center;
                 }
 
-
                 .welcome-message {
-                    margin-top: 16px;
+                    margin-top: 8px;
                     margin-bottom: 28px;
                 }
 
@@ -133,8 +125,7 @@ main {
                     display: flex;
                     flex-direction: column;
                     gap: 16px;
-                    width: clamp(330px,33vw,330px);
-
+                    width: clamp(330px, 33vw, 330px);
 
                     .form-field {
                         .field {
@@ -144,26 +135,24 @@ main {
                             gap: 8px;
 
                             border-radius: 4px;
-                            border: 1px solid #CCC;
-                            background: #FFF;
+                            border: 1px solid #ccc;
+                            background: #fff;
 
                             input {
                                 outline: none;
                                 border: none;
                                 width: 100%;
                                 font-size: 14px;
-              
+
                                 line-height: 20px;
 
                                 &::placeholder {
                                     color: #999;
                                     cursor: pointer;
-                                    /* Italic/Regular/14 */
                                     font-size: 14px;
                                     font-style: italic;
                                     font-weight: 400;
                                     line-height: 20px;
-                                    /* 142.857% */
                                 }
                             }
 
@@ -171,7 +160,6 @@ main {
                                 display: flex;
                                 align-items: center;
                             }
-
                         }
 
                         .error {
@@ -179,16 +167,14 @@ main {
                             align-items: center;
                             gap: 8px;
 
-
-
-                            margin-top: 12px;
+                            margin-top: 4%;
 
                             .error-icon {
                                 height: 18px;
                             }
 
                             .error-msg {
-                                color: #C20006;
+                                color: #c20006;
                                 font-size: 12px;
                                 font-style: normal;
                                 font-weight: 400;
@@ -197,18 +183,11 @@ main {
                         }
                     }
 
-
                     .forget-password {
                         align-self: flex-end;
                         margin-bottom: 28px;
+                        margin-top: -4px;
                     }
-
-                    // @media screen and (min-width:1366px) {
-                    //     width: 330px;
-
-
-                    // }
-
                 }
 
                 .login-btn {
@@ -220,12 +199,11 @@ main {
                     align-self: stretch;
 
                     border-radius: 4px;
-                    background: #D94E3B;
+                    background: #d94e3b;
 
                     cursor: pointer;
 
-
-                    color: #FFF;
+                    color: #fff;
                     /* Semibold/14 */
                     font-family: Open Sans;
                     font-size: 14px;
@@ -235,7 +213,7 @@ main {
                     /* 142.857% */
                 }
 
-                @media screen and (max-width:768px) {
+                @media screen and (max-width: 767px) {
                     margin-top: 35px;
                 }
             }
@@ -257,23 +235,20 @@ main {
                     font-weight: 600;
                     line-height: normal;
                 }
-
-
             }
 
-            @media screen and (max-width:768px) {
-                margin-bottom: 42px;
-                margin-top: 42px;
+            @media screen and (max-width: 767px) {
+                margin-bottom: 10%;
+                margin-top: 10%;
             }
-
         }
-        @media screen and (max-width:768px) {
+
+        @media screen and (max-width: 767px) {
             width: 100%;
         }
-
     }
 
-    @media screen and (max-width:768px) {
+    @media screen and (max-width: 767px) {
         flex-direction: column-reverse;
     }
 }
